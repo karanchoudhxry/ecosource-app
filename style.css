@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+body{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    color: black;
+}
+
+h1{
+    color: #2F3C7E;
+    font-size: 64px;
+    letter-spacing: 2px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.content{
+    background: #fff;
+    max-width: 960px;
+    margin: 30px auto;
+    padding:  20px 30px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    padding: 20px;
+    background: #f6f6f6;
+    font-size: 20px;
+    color: #555;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    height: 46px;
+}
+#idea-list > li{
+    margin-top: 18px;
+}
+li span{
+    display: block;
+}
+
+li div{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: rgba(255,255,255,0.6);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+    cursor:  pointer;
+}
+.header-logo{
+    width: 20%;
+    padding: 10px;
+    padding-left:50px;
+    float: left;
+    display: inline;
+}
+footer h6{
+    color: rgb(141, 141, 141); 
+    text-align: center; 
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+nav ul{
+    position: relative;
+}
+ul li{
+    --tagify-dd-color-primary: rgb(34, 34, 34);
+    --tagify-dd-bg-color: #fff;
+    box-sizing: border-box;
+    border: 0 solid #e2e8f0;
+    --bg-opacity: 1;
+    background-color: rgba(255,255,255,var(--bg-opacity));
+    --border-opacity: 1;
+    border-color: rgba(34, 34, 34,var(--border-opacity));
+    border-radius: .5rem;
+    border-width: 2px;
+    padding: 1.25rem;
+    position: relative;
+    margin-top: 10px;
+    padding: 20px;
+    height: fit-content;
+}
+.title{
+    font-weight: bolder;
+}
+nav{
+    background-color: white;
+    width: 100%;
+    display: inline-block;
+}
+nav ul li{
+    -webkit-text-size-adjust: 100%;
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;
+    line-height: 1.5;
+    --tagify-dd-color-primary: #3595f6;
+    --tagify-dd-bg-color: #fff;
+    color: inherit;
+    box-sizing: border-box;
+    border: 0 solid #e2e8f0;
+    --bg-opacity: 1;
+    background-color: rgba(255,255,255,var(--bg-opacity));
+    --border-opacity: 1;
+    border-color: rgba(0,0,0,var(--border-opacity));
+    border-radius: .25rem;
+    border-width: 2px;
+    display: inline-block;
+    font-weight: 700;
+    height: 100%;
+    font-size: 1rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    width: fit-content;
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: .1s;
+    padding: 9px 12px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-logo{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header-logo{
+        width: 80%;
+    }
+    footer h6{
+        font-size: 13px;
+    }
+}

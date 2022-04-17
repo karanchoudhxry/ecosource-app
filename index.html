@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Ecosource empowers users to create awareness about climate change. It lets users to share ideas and inspire others to make a difference.">
+    <meta name="keywords" content="Ecosource">
+    <meta name="author" content="Karan Choudhary">
+    <meta name="theme-color" content="#2F3C7E">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/favicon-light-.png" type="image/x-icon">
+            
+    <!-- The core Firebase JS SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+ 
+    <title>Ecosource</title>
+</head>
+
+<body>
+    <nav>
+        <a href="#"><img src="./assets/ecosource.png" alt="logo" class="header-logo"></a>
+        <ul>
+            <div style="display: inline; float: right; margin-right: 25px; padding-top: 5px;">
+                <!-- <li><a href="#content"><img src="./assets/sparkle.svg" alt="sparkle" width="18px" > Discover</a></li> -->
+                <li><a href="./campaigns" target="blank"><img src="./assets/campaign.svg" alt="campaign" width="20px" > Campaigns & Initiatives</a></li>
+                <li><a href="./stars" target="blank"><img src="./assets/stars.svg" alt="stars" width="20px" > Stars</a></li>
+                <li><a href="./share/" target="blank"><img src="./assets/idea.svg" alt="idea" width="20px"> Share an Idea</a></li>
+            </div>
+        </ul>
+    </nav>
+    
+    <div class="hero-section"  style="height: 550px; display: block;" >
+        <h2 style="width:1000px; color: #2f3c7e; font-size: 78px; margin: auto; font-weight: 700;margin-top: 40px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Empowering individuals to build a future in which nature and people can thrive together.</h2>
+    </div>
+
+    <div class="hero-section-2" style="height: 450px; display: block;" >
+        <div style="background-color: #fbeaeb; height: 1200px;">
+            <h2 style="width:1400px; font-size: 45px; margin: auto; font-weight: 400;padding-top: 100px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Climate Change is affecting our Earth drastically. This is the decade to take action for the planet. There's no time to waste.</h2>
+            <p style="width:1500px; font-size: 30px; margin: auto; font-weight: 300;padding-top: 40px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Stand with us and support science-based solutions to nature's biggest challenges. Share among people the effects and causes of climate change. Aware people about what they can do to help control climate change. Discover the ideas given below or submit one, so that people can be made aware and our earth can be saved.</p>
+        </div>
+    </div>
+
+    <div class="content" id="content" style="border-radius: 12px;">
+        <h2 style="font-family:Nunito Sans, sans-serif; font-size: 30px;">Featured Ideas</h2>
+        <ul id="idea-list"></ul>
+    </div>
+
+    <footer style="background-color: #eeeeee; color: black;">
+        <h6 style="margin: none; margin-bottom: 0px; padding: 18px; color: #232323;">Copyright © 2022 Ecosource</h6>
+    </footer>
+
+    <script>
+        //Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBaHHdlt7wJmMvmO4ApMscNPVLE-Kvoc5k",
+            authDomain: "ecosourceio.firebaseapp.com",
+            projectId: "ecosourceio",
+            storageBucket: "ecosourceio.appspot.com",
+            messagingSenderId: "372036741704",
+            appId: "1:372036741704:web:bda0ea93c06ca31a46c67d",
+            measurementId: "G-BCN8D12F01"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // firebase.analytics();
+
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true }); 
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

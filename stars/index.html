@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Ecosource empowers users to create awareness about climate change. It lets users to share ideas and inspire others to make a difference.">
+    <meta name="keywords" content="Ecosource">
+    <meta name="author" content="Karan Choudhary">
+    <meta name="theme-color" content="#2F3C7E">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../assets/favicon-light-.png" type="image/x-icon">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <title>Ecosource</title>
+</head>
+<body>
+    <nav>
+        <a href="#"><img src="../assets/ecosource.png" alt="logo" class="header-logo"></a>
+        <ul>
+            <div style="display: inline; float: right; margin-right: 25px; padding-top: 5px;">
+                <li><a href="../nominate/" target="blank"><img src="../assets/stars.svg" alt="stars" width="20px" > Nominate a star</a></li>
+                <li><a href="../campaigns" target="blank"><img src="../assets/campaign.svg" alt="campaign" width="20px" > Campaigns & Initiatives</a></li>
+                <li><a href="../share/" target="blank"><img src="../assets/idea.svg" alt="idea" width="20px"> Share an Idea</a></li>
+            </div>
+        </ul>
+    </nav>
+    
+    <div class="hero-section"  style="height: 500px; display: block;" >
+        <h1>Ecosource Stars</h1>
+        <div class="content">
+            <ul style="list-style: none; padding-left: 0px;" id="stars-list"></ul>
+        </div>
+    </div>
+    
+    <!-- <footer style="background-color: #eeeeee; color: black;">
+        <h6 style="margin: none; margin-bottom: 0px; padding: 18px; color: #232323;">Copyright © 2022 Ecosource</h6>
+    </footer> -->
+
+    <script>
+        //Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBaHHdlt7wJmMvmO4ApMscNPVLE-Kvoc5k",
+            authDomain: "ecosourceio.firebaseapp.com",
+            projectId: "ecosourceio",
+            storageBucket: "ecosourceio.appspot.com",
+            messagingSenderId: "372036741704",
+            appId: "1:372036741704:web:bda0ea93c06ca31a46c67d",
+            measurementId: "G-BCN8D12F01"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true }); 
+        </script>
+    <script src="app.js"></script>
+</body>
+</html>
