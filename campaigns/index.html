@@ -8,7 +8,6 @@
     <meta name="author" content="Karan Choudhary">
     <meta name="theme-color" content="#2F3C7E">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./style.css"> -->
     <link rel="shortcut icon" href="../assets/favicon-light-.png" type="image/x-icon">
 
     <!-- The core Firebase JS SDK -->
@@ -134,13 +133,50 @@
         .coverImage{
             width: 100%;
         }
+        body > nav > ul > div{
+            display: inline; float: right; margin-right: 25px; padding-top: 5px;
+        }
+        @media only screen and (max-width: 600px) {
+            .header-logo{
+                width: 80%;
+            }
+        }
+
+        @media only screen and (max-width: 560px) {
+            nav ul li a{
+                font-size: 12px;
+            }
+            ul li a img{
+                width: 16px;
+            }
+        }
+
+        @media only screen and (max-width: 430px) {
+            nav ul li a{
+                font-size: 10px;
+            }
+            nav ul li{
+                padding: 5px 8px;
+                padding-bottom: 8px;
+            }
+            ul li a img{
+                width: 14px;
+            }
+            body > nav > ul > div{
+                font-size :14px ;
+                float: left;
+            }
+        }
+        body > div.hero-section > h1{
+            max-width: 90%;
+        }
     </style>
 </head>
 <body>
     <nav>
         <a href="../"><img src="../assets/ecosource.png" alt="logo" class="header-logo"></a>
         <ul>
-            <div style="display: inline; float: right; margin-right: 25px; padding-top: 5px;">
+            <div>
                 <li><a href="../"><img src="../assets/sparkle.svg" alt="sparkle" width="20px" > Discover</a></li>
                 <li><a href="../stars" target="blank"><img src="../assets/stars.svg" alt="stars" width="20px" > Stars</a></li>
                 <li><a href="../share" target="blank"><img src="../assets/idea.svg" alt="idea" width="20px"> Share an Idea</a></li>
