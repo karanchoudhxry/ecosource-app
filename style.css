@@ -165,6 +165,7 @@ body > div.hero-section > h2 {
     body > div.hero-section > h2{
         font-size: 40px;
         line-height: 60px;
+        width: 80%;
     }
 }
 
