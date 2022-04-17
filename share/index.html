@@ -8,13 +8,232 @@
     <meta name="author" content="Karan Choudhary">
     <meta name="theme-color" content="#2F3C7E">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="../assets/favicon-light-.png" type="image/x-icon">
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
     <title>Ecosource</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+        body{
+            /* background:#f0f5f5; */
+            font-family: 'Nunito Sans', sans-serif;
+            margin:0px;
+        }
+
+        h1{
+            color: #2F3C7E;
+            font-size: 64px;
+            letter-spacing: 2px;
+            margin-top: 80px;
+            text-align: center;
+            text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizelegibility;
+            box-sizing: border-box;
+            font-family: "Nunito Sans", sans-serif;
+            font-weight: 700;
+            letter-spacing: normal;
+            font-size: 36px;
+            line-height: 40px;
+        }
+
+        .content{
+            background:#f0f5f5;
+            max-width: 960px;
+            margin: 30px auto;
+            padding:  20px 30px;
+            border-radius: 10px 10px 10px 10px;
+            /* box-shadow: 1px 3px 5px rgba(0,0,0,0.1) */
+        }
+
+        form input{
+            width: 80%;
+            margin: 0;
+            border: 0;
+            /* border-bottom: 1px solid #eee;
+            margin: 0 1%; */
+            padding: 10px;
+            display: block;
+            box-sizing: border-box;
+            font-size: 18px;
+        }
+
+        form input:focus{
+            outline: none;
+            border-bottom: 3px solid #2F3C7E;
+            padding-bottom: 8px;
+            transition: all ease 0.2s;
+        }
+
+        form:after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+        form {
+            text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Nunito Sans", sans-serif;
+            font-weight: 400;
+            line-height: 1.5;
+            text-rendering: optimizelegibility;
+            font-size: 17px !important;
+            box-sizing: border-box;
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px 0px;
+            height: 100%;
+            padding: 40px;
+        }
+        form label{
+            text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizelegibility;
+            box-sizing: border-box;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-family: Montserrat, sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.6px;
+            color: rgb(92, 104, 109);
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        form input {
+            -webkit-font-smoothing: antialiased;
+            margin: 0px;
+            overflow: visible;
+            background-color: rgb(252, 252, 252);
+            border-radius: 4px;
+            border: 2px solid rgb(228, 234, 235);
+            box-sizing: border-box;
+            display: flex;
+            height: 48px;
+            outline: none;
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 100%;
+            font-weight: 400;
+            letter-spacing: normal;
+            color: rgb(39, 51, 57);
+            font-size: 18px;
+            line-height: 27px;
+            box-shadow: none;
+        }
+
+        form button{
+            text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            line-height: 1.15;
+            overflow: visible;
+            text-transform: none;
+            -webkit-box-align: center;
+            align-items: center;
+            background-color:#30429e;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            color: rgb(255, 255, 255);
+            display: flex;
+            font-family: "Nunito Sans", sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            height: 44px;
+            -webkit-box-pack: center;
+            justify-content: center;
+            margin: 0px;
+            outline: none;
+            padding: 0px 32px;
+            transition: all 0.1s ease-in 0s;
+            white-space: nowrap;
+            width: 100%;
+            appearance: button;
+            margin-top: 24px;
+        }
+
+        form button:hover{
+            background-color: #2b3b88;
+            transition: 0.3s ease-in;
+        }
+
+        .header-logo{
+            width: 20%;
+            padding: 10px;
+            padding-left:50px;
+            float: left;
+            display: inline;
+        }
+
+        nav ul{
+            position: relative;
+        }
+        ul li{
+            --tagify-dd-color-primary: rgb(34, 34, 34);
+            --tagify-dd-bg-color: #fff;
+            box-sizing: border-box;
+            border: 0 solid #e2e8f0;
+            --bg-opacity: 1;
+            background-color: rgba(255,255,255,var(--bg-opacity));
+            --border-opacity: 1;
+            border-color: rgba(34, 34, 34,var(--border-opacity));
+            border-radius: .5rem;
+            border-width: 2px;
+            padding: 1.25rem;
+            position: relative;
+            margin-top: 10px;
+            padding: 20px;
+            height: fit-content;
+        }
+        .title{
+            font-weight: bolder;
+        }
+        nav{
+            background-color: white;
+            width: 100%;
+            display: inline-block;
+        }
+        nav ul li{
+            -webkit-text-size-adjust: 100%;
+            font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;
+            line-height: 1.5;
+            --tagify-dd-color-primary: #3595f6;
+            --tagify-dd-bg-color: #fff;
+            color: inherit;
+            box-sizing: border-box;
+            border: 0 solid #e2e8f0;
+            --bg-opacity: 1;
+            background-color: rgba(255,255,255,var(--bg-opacity));
+            --border-opacity: 1;
+            border-color: rgba(0,0,0,var(--border-opacity));
+            border-radius: .25rem;
+            border-width: 2px;
+            display: inline-block;
+            font-weight: 700;
+            height: 100%;
+            font-size: 1rem;
+            padding-top: .25rem;
+            padding-bottom: .25rem;
+            padding-left: .75rem;
+            padding-right: .75rem;
+            width: fit-content;
+            transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+            transition-duration: .1s;
+            padding: 9px 12px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+        #description{
+            height: 200px;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -40,10 +259,6 @@
             </form>
         </div>
     </div>
-
-    <!-- <footer style="background-color: #eeeeee; color: black;">
-        <h6 style="margin: none; margin-bottom: 0px; padding: 18px; color: #232323;">Copyright © 2022 Ecosource</h6>
-    </footer> -->
     
     <script>
         //Firebase configuration
@@ -62,6 +277,19 @@
         const db = firebase.firestore();
         db.settings({ timestampsInSnapshots: true }); 
         </script>
-    <script src="app.js"></script>
+    <script>
+        const form = document.querySelector('#add-idea-form');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            db.collection('ideas').add({
+                title: form.title.value,
+                description: form.description.value,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            });
+            form.title.value = '';
+            form.description.value = '';
+        });
+    </script>
 </body>
 </html>
