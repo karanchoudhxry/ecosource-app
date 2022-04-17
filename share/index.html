@@ -236,6 +236,40 @@
         #description{
             height: 200px;
         }
+        body > nav > ul > div{
+            display: inline; float: right; margin-right: 25px; padding-top: 5px;
+        }
+        @media only screen and (max-width: 600px) {
+            .header-logo{
+                width: 80%;
+            }
+        }
+
+        @media only screen and (max-width: 560px) {
+            nav ul li a{
+                font-size: 12px;
+            }
+            ul li a img{
+                width: 16px;
+            }
+        }
+
+        @media only screen and (max-width: 430px) {
+            nav ul li a{
+                font-size: 10px;
+            }
+            nav ul li{
+                padding: 5px 8px;
+                padding-bottom: 8px;
+            }
+            ul li a img{
+                width: 14px;
+            }
+            body > nav > ul > div{
+                font-size :14px ;
+                float: left;
+            }
+        }
     </style>
 </head>
 <body>

@@ -125,6 +125,43 @@
             margin-top: 8px;
             margin-bottom: 5px;
         }
+        body > nav > ul > div{
+            display: inline; float: right; margin-right: 25px; padding-top: 5px;
+        }
+        @media only screen and (max-width: 600px) {
+            .header-logo{
+                width: 80%;
+            }
+        }
+
+        @media only screen and (max-width: 560px) {
+            nav ul li a{
+                font-size: 12px;
+            }
+            ul li a img{
+                width: 16px;
+            }
+            body > div.hero-section > h5{
+                max-width: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 430px) {
+            nav ul li a{
+                font-size: 10px;
+            }
+            nav ul li{
+                padding: 5px 8px;
+                padding-bottom: 8px;
+            }
+            ul li a img{
+                width: 14px;
+            }
+            body > nav > ul > div{
+                font-size :14px ;
+                float: left;
+            }
+        }
     </style>
 </head>
 <body>
@@ -141,6 +178,15 @@
     
     <div class="hero-section"  style="height: 500px; display: block;" >
         <h1>Ecosource Stars</h1>
+        <h5 style="text-align: center;
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizelegibility;
+        box-sizing: border-box;
+        font-weight: 300;
+        letter-spacing: normal;
+        font-size: 18px;
+        line-height: 26px;max-width: 50%; margin-left: 24%;">"Maybe you can't change the world by your actions alone, but you can change yourself. And when you do, the world around you may change by attempting to understand you, as we all try to understand each other."   - John H. Francis III</h5>
         <div class="content">
             <ul style="list-style: none; padding-left: 0px;" id="stars-list"></ul>
         </div>
