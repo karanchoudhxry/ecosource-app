@@ -151,7 +151,7 @@ body > div.hero-section > h2 {
         width: 50%;
     }
     body > div.hero-section{
-        padding-bottom:80px ;
+        padding-bottom:60px ;
     }
 }
 
@@ -176,8 +176,9 @@ body > div.hero-section > h2 {
         width: 16px;
     }
     body > div.hero-section > h2{
-        font-size: 240px;
-        line-height: 40px;
+        font-size: 40px;
+        line-height: 50px;
+        padding-bottom: 30px;
     }
     body > div.hero-section{
         padding-bottom:100px ;
